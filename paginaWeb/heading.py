@@ -1,14 +1,7 @@
 import flet as ft
 
 def heading(page: ft.page):
-    img = ft.Image(
-        src=f"./paginaWeb/profile.png",
-        width=200,
-        height=200,
-        fit=ft.ImageFit.CONTAIN,
-    )
-
-    name = ft.Text(
+    heading_name = ft.Text(
         "Juan Castelló",
         size=70,
         weight=ft.FontWeight.W_700,
@@ -19,18 +12,23 @@ def heading(page: ft.page):
     )
 
     heading_text = ft.Column(
-        [name, description]
+        [heading_name, description]
     )
+
+
+    img = ft.Image(
+        src=f"./paginaWeb/profile.png",
+        width=200,
+        height=200,
+        fit=ft.ImageFit.CONTAIN,
+    )
+    img.border_radius = ft.border_radius.all(99999)
 
     encabezado = ft.Row(
         [img, heading_text],
         alignment = ft.MainAxisAlignment.CENTER
     )
-    img.border_radius = ft.border_radius.all(99999)
-
     # page.add(name)
     # page.add(img)
     page.add(encabezado)
     page.update()
-
-
