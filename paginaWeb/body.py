@@ -4,7 +4,7 @@ def body(page: ft.page):
     body = ft.Container(
         ft.Row([
             ft.Column([aboutMe(), contact()]),
-             trajectory()
+            trajectory()
             ],
         alignment = ft.MainAxisAlignment.CENTER,
         )
