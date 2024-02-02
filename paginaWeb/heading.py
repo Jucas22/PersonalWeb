@@ -14,7 +14,7 @@ def heading(page: ft.page):
     )
 
     img = ft.Image(
-        src=f"./paginaWeb/profile.png",
+        src=f"./profile.png",
         width=200,
         height=200,
         fit=ft.ImageFit.CONTAIN,
